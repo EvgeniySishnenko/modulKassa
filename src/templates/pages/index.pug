@@ -1,0 +1,45 @@
+extends ../template
+
+block variables
+    - var title = 'Добро пожаловать'
+
+block content
+    header.header
+        .container.container__header
+            .logo
+                a.logo__link
+                    svg.logo-svg
+                        use(xlink:href="assets/sprite/sprite.svg#logo")
+                    span.logo__text1 Модуль
+                    span.logo__text2 Касса
+            .block__menu
+                ul.menu__list
+                    include ../common/menu-mixin.pug
+                    for item in menuList
+                        +menu(item)
+            .options
+                ul.options__list
+                    li.options__item
+                        a.options__link
+                            img(src="assets/images/settings.png")
+                    li.options__item
+                        a.options__link
+                            img(src="assets/images/login.png")
+                    li.options__item
+                        a.options__link
+                            img(src="assets/images/phone.png")
+                    li.options__item
+                        .hamb__btn
+                            .hamb__line1
+                            .hamb__line2
+                            .hamb__line3
+    include ../common/menu-mobile.pug
+                            
+
+
+    
+    
+
+
+
+                                

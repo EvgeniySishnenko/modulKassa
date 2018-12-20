@@ -1,0 +1,22 @@
+.block__menu--mobile
+    ul.menu__list--mobile
+        include menu-mixin.pug
+        for item in menuList
+            +menu-mobile(item)
+    .options--mobile
+        .options__phone 8 495 153 14 95 
+        ul.options__list--mobile
+            li.options__item--mobile
+                a.options__link--mobile 
+                    img(src="assets/images/phone1.png").options__img
+                    span.options__shrttext Заказать звонок
+            li.options__item--mobile
+                a.options__link--mobile 
+                    img(src="assets/images/settings1.png").options__img
+                    span.options__shrttext Техподдержка
+            li.options__item--mobile
+                a.options__link--mobile 
+                    img(src="assets/images/login1.png").options__img
+                    span.options__shrttext Войти
+           
+    

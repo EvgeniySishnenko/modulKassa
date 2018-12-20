@@ -1,0 +1,59 @@
+-
+    var menuList = [
+        {
+            item: 'Кому подходит',
+            subItem: [
+                ['Полет нормальный'], ['Полет нормальный'], ['Полет нормальный'], ['Полет нормальный'], ['Мобильная касса'], ['Стационарная касса',]     
+            ]       
+        },
+        {
+            item: 'Кассы',
+            subItem: [
+                ['Мобильная касса'], ['Стационарная касса'], ['Мобильная касса с эквайрингом'], ['Покупка 2-х и более касс']     
+            ]       
+        },
+        {
+            item: 'Аксессуары',
+            subItem: [
+                ['Полет нормальный'], ['Аренда кассы'], ['Новый ФН'],['Полет нормальный'],['Полет нормальный'], ['Полет нормальный']     
+            ]       
+        },
+        {
+            item: 'Услуги',
+            subItem: [
+                ['Касса за 1 Р'], ['Аренда кассы'],  ['Новый ФН'], ['Полет нормальный'], ['Легкий старт'], ['Эквайринг'], ['Кредит под аборот']   
+            ]       
+        },
+        {
+            item: 'Тарифы',
+            subItem: [
+                ['Полет нормальный'], ['Полет нормальный'], ['Полет нормальный'], ['Полет нормальный']     
+            ]       
+        },
+        {
+            item: 'Информация',
+            subItem: [
+                ['Полет нормальный'], ['Полет нормальный'], ['Аренда кассы'], ['Полет нормальный'], ['Аренда кассы']     
+            ]       
+        }
+    ];
+
+mixin menu(item)
+    li.menu__item
+        a(href="#").menu__link=item.item
+        ul.menu__sublist
+            each sub in item.subItem
+                li.menu__subitem
+                    a(href="#").menu__sublink= sub
+
+mixin menu-mobile(item)
+    li.menu__item--mobile
+        a(href="#").menu__link--mobile=item.item
+            img(src="assets/images/up.png").subitem__img--up.hide
+            img(src="assets/images/down.png").subitem__img--down    
+        ul.menu__sublist--mobile
+            each sub in item.subItem
+                li.menu__subitem--mobile
+                    a(href="#").menu__sublink--mobile= sub   
+                                     
+            
