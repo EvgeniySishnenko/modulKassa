@@ -246,6 +246,11 @@
 .menu__sublink--mobile {
     font-family: 'Roboto-light';
     color: $blue;
+     transition: ease 0.2s;
+
+    &:hover {
+        color: $orange;
+    }
 }
 .hide {
     display: none;
